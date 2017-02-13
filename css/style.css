@@ -265,7 +265,6 @@ a.button:hover {
   font-size: 1.2rem;
 }
 
-
 .logo {
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -283,9 +282,11 @@ a.button:hover {
     font-size: 2rem;
   }
 
-  body {
-    font-size: 1.4rem;
+  .playlist-info h1 {
+    font-size: 2rem;
+    line-height: 1.2em;
   }
+
   .main {
     padding: 24px;
   }
@@ -300,16 +301,16 @@ a.button:hover {
   }
 
   a.button {
-    font-size: 4rem;
-    width: 70px;
-    height: 70px;
-    background: #FFFFFF;
+    width: 50px;
+    height: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    line-height: 70px;
+    line-height: 50px;
     padding: 0;
     margin: 0 auto;
+    background: #FFFFFF url('../img/spotify.svg');
+    background-size: cover;
   }
 
   .spotify-logo {
@@ -317,7 +318,7 @@ a.button:hover {
     color: #1DB954;
   }
 
-  .spotify-text, .social h2, .description > p {
+  .spotify-text, .social h2, .description > p, div#pp-nav {
     display: none;
   }
 
@@ -336,7 +337,11 @@ a.button:hover {
   }
 
   #outro {
-    padding: 32px;
+    padding-right: 48px;
+  }
+
+  .arrow {
+    bottom: 24px;
   }
 
   }

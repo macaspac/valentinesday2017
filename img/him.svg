@@ -94,7 +94,7 @@
 
       #heart {
         transform-origin: 0% 100%;
-      	animation: heart 4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      	animation: heart 4s cubic-bezier(0.23, 1, 0.32, 1) 3s infinite;
       }
 
       #light {
