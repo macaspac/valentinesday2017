@@ -1,0 +1,336 @@
+/* CSS Reset
+-------------------------------------------------- */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+
+/* Global Stuff
+-------------------------------------------------- */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6em;
+    line-height: 1.9;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #000000;
+    margin: auto;
+    webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.main {
+  display: flex;
+  margin: 0 auto;
+  padding: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.genre {
+  width: 100%;
+}
+
+.playlist {
+  height: 100%;
+}
+
+.playlist-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.description {
+  width: 33%;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+}
+
+.social > li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.share {
+  position: fixed;
+  top: 48px;
+  right: 48px;
+  z-index: 10;
+}
+
+.spotify-logo {
+  display: none;
+}
+
+/* Grid
+-------------------------------------------------- */
+
+.flex-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.flex-center-h {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.flex-center-v {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.flex-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+h1 { font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 2.4rem; letter-spacing: 0.02em; }
+
+.main-title { color: #FF5851; }
+.dark { color: #191919; }
+
+h2 { font-size: 1.2rem; font-weight: 400; }
+
+/* Links and Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a.button {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #FF5851;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12), 0 0px 0px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a.button:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.10);
+  z-index: 1;
+}
+
+.social a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#outro a {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#outro a:hover, .smolhax a:hover {
+  opacity: 0.8;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.smolhax a {
+  color: #FFFFFF;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: none;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Section 1 (Intro section)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#section1 {
+  background-color: #FFFFFF;
+}
+
+.topline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  color: #FF5851;
+  z-index: 10;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 48px;
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  width: 66%
+}
+
+/* Section illustrations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  background-attachment: fixed;
+  background-size: auto 25%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#section2 {
+  background-color: #F06BA8;
+  background-image: url('../img/him.svg');
+}
+
+#section3 {
+  background-color: #642d91;
+  background-image: url('../img/rocket.svg');
+}
+
+#section4 {
+  background-color: #2B3990;
+  background-image: url('../img/guillotine.svg');
+}
+
+#section5 {
+  background-color: #98B22B;
+  background-image: url('../img/500days.svg');
+}
+
+#section6 {
+  background-color: #f15d66;
+  background-image: url('../img/badbitch.svg');
+}
+
+#section7 {
+  background-color: #953995;
+  background-image: url('../img/hugsnotdrugs.svg');
+}
+
+#section8 {
+  background-color: #0c9dc4;
+  background-image: url('../img/fhd.svg');
+}
+
+#section9 {
+  background-color: #FF5851;
+}
+
+/* Smolhax
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.smolhax {
+  font-size: 1.2rem;
+}
+
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (max-width: 750px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  body {
+    font-size: 1.4rem;
+  }
+  .main {
+    padding: 24px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .share {
+    top: 24px;
+    right: 24px;
+  }
+
+  a.button {
+    font-size: 2em;
+    padding: 24px;
+    line-height: 24px;
+  }
+
+  .spotify-logo {
+    display: block;
+    color: #1DB954;
+  }
+
+  .spotify-text, .social h2 {
+    display: none;
+  }
+
+  .social > li {
+    font-size: 1.6em;
+    display: block;
+    margin: 0;
+    }
+
+  .description {
+    width: 60%;
+  }
+
+  .playlist-info {
+    height: 100vh;
+  }
+
+  #outro {
+    padding: 32px;
+  }
+
+  }
+}
