@@ -300,9 +300,16 @@ a.button:hover {
   }
 
   a.button {
-    font-size: 2em;
-    padding: 24px;
-    line-height: 24px;
+    font-size: 4rem;
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    line-height: 70px;
+    padding: 0;
+    margin: 0 auto;
   }
 
   .spotify-logo {
@@ -310,7 +317,7 @@ a.button:hover {
     color: #1DB954;
   }
 
-  .spotify-text, .social h2 {
+  .spotify-text, .social h2, .description > p {
     display: none;
   }
 
