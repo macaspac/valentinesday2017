@@ -80,10 +80,6 @@ body {
   z-index: 10;
 }
 
-.spotify-logo {
-  display: none;
-}
-
 /* Grid
 -------------------------------------------------- */
 
@@ -208,7 +204,7 @@ a.button:hover {
 }
 
 .content {
-  width: 66%
+  max-width: 720px;
 }
 
 /* Section illustrations
@@ -257,7 +253,10 @@ a.button:hover {
 
 #section9 {
   background-color: #FF5851;
+  background: linear-gradient(#F45C43, #EB3349);
 }
+
+.artists {display: none;}
 
 /* Smolhax
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -309,18 +308,17 @@ a.button:hover {
     line-height: 50px;
     padding: 0;
     margin: 0 auto;
-    background: #FFFFFF url('../img/spotify.svg');
+    background: #FFFFFF url('../img/spotify.svg') no-repeat;
     background-size: cover;
-  }
-
-  .spotify-logo {
-    display: block;
-    color: #1DB954;
+    background-size: 35% 35%;
+    background-position: center;
   }
 
   .spotify-text, .social h2, .description > p, div#pp-nav {
     display: none;
   }
+
+  .artists {display: block;}
 
   .social > li {
     font-size: 1.6em;

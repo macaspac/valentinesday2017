@@ -86,15 +86,18 @@
 
       @keyframes heart {
         0%, 40% { opacity: 0; }
-        40%, 100% { opacity: 1; }
+        40%, 80% { opacity: 1; }
+        90%, 100% {opacity: 0;}
 
-        0% { transform: scale(0); }
-        20% { transform: scale(1); }
+        0% { transform: scale(0.5) translate(90px,0); }
+        20% { transform: scale(1) translate(90px,0); }
       }
 
       #heart {
+        opacity: 0;
+        transform: translate(90px,0);
         transform-origin: 0% 100%;
-      	animation: heart 4s cubic-bezier(0.23, 1, 0.32, 1) 3s infinite;
+      	animation: heart 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
       }
 
       #light {
