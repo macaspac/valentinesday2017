@@ -45,23 +45,36 @@
     </g>
 
     <style>
+      @-webkit-keyframes diamond {
+        0%, 100% { -webkit-transform: translate(-32px, -29px); transform: translate(-32px, -29px);}
+        50% { -webkit-transform: translate(-32px, -15px); transform: translate(-32px, -15px);}
+      }
+
       @keyframes diamond {
-        0%, 100% { transform: translate(-32px, -29px);}
-        50% { transform: translate(-32px, -15px);}
+        0%, 100% { -webkit-transform: translate(-32px, -29px); transform: translate(-32px, -29px);}
+        50% { -webkit-transform: translate(-32px, -15px); transform: translate(-32px, -15px);}
       }
 
       #diamond {
-      	animation: diamond 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+      	-webkit-animation: diamond 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+      	        animation: diamond 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+      }
+
+      @-webkit-keyframes shadow {
+        0%, 100% { -webkit-transform: scale(0.7, 0.9); transform: scale(0.7, 0.9); opacity: 0.1; }
+        50% {-webkit-transform: scale(1, 0.9);transform: scale(1, 0.9); opacity: 0.3; }
       }
 
       @keyframes shadow {
-        0%, 100% { transform: scale(0.7, 0.9); opacity: 0.1; }
-        50% {transform: scale(1, 0.9); opacity: 0.3; }
+        0%, 100% { -webkit-transform: scale(0.7, 0.9); transform: scale(0.7, 0.9); opacity: 0.1; }
+        50% {-webkit-transform: scale(1, 0.9);transform: scale(1, 0.9); opacity: 0.3; }
       }
 
       #shadow {
-        transform-origin: 50% 50%;
-        animation: shadow 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-animation: shadow 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+                animation: shadow 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
       }
     </style>
 </svg>

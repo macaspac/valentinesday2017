@@ -161,44 +161,49 @@
         </g>
     </g>
 <style>
-  body {
-  background-color: #2B388F;
-}
+
+  #shadow { opacity: 0.4; }
 
 
-.illustration {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 100vh;
-  background-color: #2B388F;
-}
-
-#shadow { opacity: 0.4; }
+  @-webkit-keyframes chop {
+    0% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
+    5%, 20% { -webkit-transform: translate(75px,60px); transform: translate(75px,60px);}
+    50%, 100% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
+  }
 
 
-@keyframes chop {
-  0% { transform: translate(75px,20px);}
-  5%, 20% { transform: translate(75px,60px);}
-  50%, 100% { transform: translate(75px,20px);}
-}
+  @keyframes chop {
+    0% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
+    5%, 20% { -webkit-transform: translate(75px,60px); transform: translate(75px,60px);}
+    50%, 100% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
+  }
 
-@keyframes rope {
-  0% { transform: scaleY(0.2);}
-  5%, 20% { transform: scaleY(1);}
-  50%, 100% { transform: scaleY(0.2);}
-}
+  @-webkit-keyframes rope {
+    0% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
+    5%, 20% { -webkit-transform: scaleY(1); transform: scaleY(1);}
+    50%, 100% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
+  }
 
-#chop {
-  transform: translateX(75px);
-  transform-origin: 50% 0%;
-  animation: chop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-}
+  @keyframes rope {
+    0% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
+    5%, 20% { -webkit-transform: scaleY(1); transform: scaleY(1);}
+    50%, 100% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
+  }
 
-#rope {
-  transform-origin: 50% 100%;
-  animation: rope 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-}
+  #chop {
+    -webkit-transform: translateX(75px);
+            transform: translateX(75px);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-animation: chop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+            animation: chop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+  }
+
+  #rope {
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-animation: rope 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+            animation: rope 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+  }
 </style>
 </svg>
