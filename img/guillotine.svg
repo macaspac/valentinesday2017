@@ -162,13 +162,13 @@
     </g>
 <style>
 
-  #shadow { opacity: 0.4; }
+  #shadow { opacity: 0.2; }
 
 
   @-webkit-keyframes chop {
     0% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
-    5%, 20% { -webkit-transform: translate(75px,60px); transform: translate(75px,60px);}
-    50%, 100% { -webkit-transform: translate(75px,20px); transform: translate(75px,20px);}
+    5%, 20% { -webkit-transform: translate(75px,60px); -moz-transform: translate(75px,60px); transform: translate(75px,60px);}
+    50%, 100% { -webkit-transform: translate(75px,20px); -moz-transform: translate(75px,20px); transform: translate(75px,20px);}
   }
 
 
@@ -184,6 +184,12 @@
     50%, 100% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
   }
 
+  @-moz-keyframes rope {
+    0% { -moz-transform: none !important; }
+    5%, 20% { -moz-transform: none !important; }
+    50%, 100% { -moz-transform: none !important; }
+  }
+
   @keyframes rope {
     0% { -webkit-transform: scaleY(0.2); transform: scaleY(0.2);}
     5%, 20% { -webkit-transform: scaleY(1); transform: scaleY(1);}
@@ -192,17 +198,25 @@
 
   #chop {
     -webkit-transform: translateX(75px);
+    -moz-transform: none !important;
             transform: translateX(75px);
+
     -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: none !important;
             transform-origin: 50% 0%;
+
     -webkit-animation: chop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+    -moz-animation: none !important;
             animation: chop 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
   }
 
   #rope {
     -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
     -webkit-animation: rope 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+    -moz-animation: none !important;
+    -moz-transform: scale(1) translate(0,50px);
             animation: rope 5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
   }
 </style>

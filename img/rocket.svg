@@ -113,13 +113,14 @@
 
     #ship {
       -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
     }
 
     #shadow-1, #shadow-2, #shadow-4 { opacity: 0.4; }
 
     @-webkit-keyframes ship {
-      0%, 100% { -webkit-transform: translate(43px,0); transform: translate(43px,0);}
+      0%, 100% { -webkit-transform: translate(43px,0); -moz-transform: translate(43px,0); transform: translate(43px,0);}
       50% { -webkit-transform: translate(44px, 1px); transform: translate(44px, 1px); }
     }
 
@@ -133,6 +134,11 @@
       50% { -webkit-transform: scale(1.5) translateX(10px); transform: scale(1.5) translateX(10px); }
     }
 
+    @-moz-keyframes bubble-1 {
+      0%,100% { -moz-transform: translate(0,0); }
+      50% { -moz-transform: translate(10px,0); }
+    }
+
     @keyframes bubble-1 {
       0%,100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0); }
       50% { -webkit-transform: scale(1.5) translateX(10px); transform: scale(1.5) translateX(10px); }
@@ -143,55 +149,81 @@
       50% { -webkit-transform: scale(1.5) translateX(-10px); transform: scale(1.5) translateX(-10px); }
     }
 
+    @-moz-keyframes bubble-12 {
+      0%, 100% { -moz-transform: translate(0,0); }
+      50% { -moz-transform: translate(-10px,0); }
+    }
+
     @keyframes bubble-12 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); ransform: scale(1) translateX(0); }
       50% { -webkit-transform: scale(1.5) translateX(-10px); transform: scale(1.5) translateX(-10px); }
     }
 
     @-webkit-keyframes bubble-2 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0) }
-      50% { -webkit-transform: scale(1.5) translateX(10px); transform: scale(1.5) translateX(10px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0); }
+      50% { -webkit-transform: scale(1.5) translateX(10px); -moz-transform: translate(-10px,0); transform: scale(1.5) translateX(10px); }
+    }
+
+    @-moz-keyframes bubble-2 {
+      0%, 100% { -moz-transform: translate(0,0);}
+      50% { -moz-transform: translate(-10px,0); }
     }
 
     @keyframes bubble-2 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0) }
-      50% { -webkit-transform: scale(1.5) translateX(10px); transform: scale(1.5) translateX(10px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0); }
+      50% { -webkit-transform: scale(1.5) translateX(10px); -moz-transform: translate(10px,0); transform: scale(1.5) translateX(10px); }
     }
 
     @-webkit-keyframes bubble-22 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0) }
-      50% { -webkit-transform: scale(1.5) translateX(-10px); transform: scale(1.5) translateX(-10px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0); }
+      50% { -webkit-transform: scale(1.5) translateX(-10px); -moz-transform: translate(-10px,0); transform: scale(1.5) translateX(-10px); }
+    }
+
+    @-moz-keyframes bubble-22 {
+      0%, 100% { -moz-transform: translate(0,0); }
+      50% { -moz-transform: translate(-10px,0); }
     }
 
     @keyframes bubble-22 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0) }
-      50% { -webkit-transform: scale(1.5) translateX(-10px); transform: scale(1.5) translateX(-10px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0) }
+      50% { -webkit-transform: scale(1.5) translateX(-10px); -moz-transform: translate(-10px,0); transform: scale(1.5) translateX(-10px); }
     }
 
     @-webkit-keyframes bubble-3 {
-      0%, 100% { -webkit-transform: scale(0.9) translateX(0); transform: scale(0.9) translateX(0);  }
-      50% { -webkit-transform: scale(1.2) translateX(10px); transform: scale(1.2) translateX(10px); }
+      0%, 100% { -webkit-transform: scale(0.9) translateX(0); -moz-transform: translate(0,0); transform: scale(0.9) translateX(0);  }
+      50% { -webkit-transform: scale(1.2) translateX(10px); -moz-transform: translate(10px,0); transform: scale(1.2) translateX(10px); }
+    }
+
+    @-moz-keyframes bubble-3 {
+      0%, 100% {  -moz-transform: translate(0,0); }
+      50% { -moz-transform: translate(10px,0); }
     }
 
     @keyframes bubble-3 {
-      0%, 100% { -webkit-transform: scale(0.9) translateX(0); transform: scale(0.9) translateX(0);  }
-      50% { -webkit-transform: scale(1.2) translateX(10px); transform: scale(1.2) translateX(10px); }
+      0%, 100% { -webkit-transform: scale(0.9) translateX(0); -moz-transform: translate(0,0); transform: scale(0.9) translateX(0);  }
+      50% { -webkit-transform: scale(1.2) translateX(10px); -moz-transform: translate(10px,0); transform: scale(1.2) translateX(10px); }
     }
 
     @-webkit-keyframes bubble-32 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0);  }
-      50% { -webkit-transform: scale(1.5) translateX(-5px); transform: scale(1.5) translateX(-5px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0);  }
+      50% { -webkit-transform: scale(1.5) translateX(-5px); -moz-transform: translate(-5px,0); transform: scale(1.5) translateX(-5px); }
+    }
+
+    @-moz-keyframes bubble-32 {
+      0%, 100% { -moz-transform: translate(0,0); }
+      50% { -moz-transform: translate(-5px,0); }
     }
 
     @keyframes bubble-32 {
-      0%, 100% { -webkit-transform: scale(1) translateX(0); transform: scale(1) translateX(0);  }
-      50% { -webkit-transform: scale(1.5) translateX(-5px); transform: scale(1.5) translateX(-5px); }
+      0%, 100% { -webkit-transform: scale(1) translateX(0); -moz-transform: translate(0,0); transform: scale(1) translateX(0);  }
+      50% { -webkit-transform: scale(1.5) translateX(-5px); -moz-transform: translate(-5px,0); transform: scale(1.5) translateX(-5px); }
     }
 
     #bubble-1 {
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-1 20s linear 1s infinite;
+      -moz-transform: none !important;
               animation: bubble-1 20s linear 1s infinite;
     }
 
@@ -199,6 +231,7 @@
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-12 20s linear 1s infinite;
+      -moz-transform: none !important;
               animation: bubble-12 20s linear 1s infinite;
     }
 
@@ -206,6 +239,7 @@
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-2 10s linear 500ms infinite;
+      -moz-transform: none !important;
               animation: bubble-2 10s linear 500ms infinite;
     }
 
@@ -213,6 +247,7 @@
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-22 10s linear 500ms infinite;
+      -moz-transform: none !important;
               animation: bubble-22 10s linear 500ms infinite;
     }
 
@@ -220,6 +255,7 @@
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-3 15s linear infinite;
+      -moz-transform: none !important;
               animation: bubble-3 15s linear infinite;
     }
 
@@ -227,6 +263,7 @@
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
       -webkit-animation: bubble-32 15s linear infinite;
+      -moz-transform: none !important;
               animation: bubble-32 15s linear infinite;
     }
 
